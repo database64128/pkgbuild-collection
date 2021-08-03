@@ -1,0 +1,26 @@
+# Maintainer: Dušan Simić <dusan.simic1810@gmail.com>
+# Maintainer: database64128 <free122448@hotmail.com>
+
+pkgname=f34-backgrounds
+pkgver=34.0.1
+pkgrel=3
+_relnum=34
+pkgdesc="Fedora $_relnum backgrounds"
+arch=('any')
+url="https://github.com/fedoradesign/backgrounds"
+license=('custom')
+source=("https://github.com/fedoradesign/backgrounds/releases/download/v34.0.1/f34-backgrounds-34.0.1.tar.xz")
+sha256sums=('d20a2d810e0dd3213c5996ecbbb0778e650866bc9c6ea8c4331665d3525c263e')
+
+build() {
+    cd $pkgname
+    make
+}
+
+package() {
+    cd $pkgname
+    make install DESTDIR="$pkgdir"
+    install -Dm644 CC-BY-SA-4.0 "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+}
+
+#vim: syntax=sh

@@ -1,0 +1,26 @@
+# Maintainer: Leandro Guedes <leandroguedes@protonmail.com>
+# Maintainer: database64128 <free122448@hotmail.com>
+
+pkgname=f32-backgrounds
+pkgver=32.2.2
+pkgrel=3
+_relnum=32
+pkgdesc="Fedora $_relnum backgrounds"
+arch=('any')
+url="https://github.com/fedoradesign/backgrounds"
+license=('custom')
+source=("https://github.com/fedoradesign/backgrounds/releases/download/v32.2.2/f32-backgrounds-32.2.2.tar.xz")
+sha256sums=('d45ef969a7bb263eccd883e7fef58a71417e3b9999d187b2ee15ae163ff81618')
+
+build() {
+    cd $pkgname
+    make
+}
+
+package() {
+    cd $pkgname
+    make install DESTDIR="$pkgdir"
+    install -Dm644 CC-BY-SA-4.0 "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+}
+
+#vim: syntax=sh

@@ -1,0 +1,11 @@
+pkgbase = f33-backgrounds
+	pkgdesc = Fedora 33 backgrounds
+	pkgver = 33.0.8
+	pkgrel = 1
+	url = https://github.com/fedoradesign/backgrounds
+	arch = any
+	license = custom
+	source = https://github.com/fedoradesign/backgrounds/releases/download/v33.0.8/f33-backgrounds-33.0.8.tar.xz
+	sha256sums = e3e0496677ad787a3214db724b70c08d6805bab4a7ca76b9bb75794d8f1e1b68
+
+pkgname = f33-backgrounds

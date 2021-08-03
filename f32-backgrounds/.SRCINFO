@@ -1,0 +1,11 @@
+pkgbase = f32-backgrounds
+	pkgdesc = Fedora 32 backgrounds
+	pkgver = 32.2.2
+	pkgrel = 3
+	url = https://github.com/fedoradesign/backgrounds
+	arch = any
+	license = custom
+	source = https://github.com/fedoradesign/backgrounds/releases/download/v32.2.2/f32-backgrounds-32.2.2.tar.xz
+	sha256sums = d45ef969a7bb263eccd883e7fef58a71417e3b9999d187b2ee15ae163ff81618
+
+pkgname = f32-backgrounds

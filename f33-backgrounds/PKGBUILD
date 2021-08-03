@@ -1,0 +1,26 @@
+# Maintainer: Leandro Guedes <leandroguedes@protonmail.com>
+# Maintainer: database64128 <free122448@hotmail.com>
+
+pkgname=f33-backgrounds
+pkgver=33.0.8
+pkgrel=1
+_relnum=33
+pkgdesc="Fedora $_relnum backgrounds"
+arch=('any')
+url="https://github.com/fedoradesign/backgrounds"
+license=('custom')
+source=("https://github.com/fedoradesign/backgrounds/releases/download/v33.0.8/f33-backgrounds-33.0.8.tar.xz")
+sha256sums=('e3e0496677ad787a3214db724b70c08d6805bab4a7ca76b9bb75794d8f1e1b68')
+
+build() {
+    cd $pkgname
+    make
+}
+
+package() {
+    cd $pkgname
+    make install DESTDIR="$pkgdir"
+    install -Dm644 CC-BY-SA-4.0 "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+}
+
+#vim: syntax=sh
