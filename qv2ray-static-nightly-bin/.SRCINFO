@@ -1,8 +1,8 @@
-pkgbase = qv2ray-static-bin-nightly
+pkgbase = qv2ray-static-nightly-bin
 	pkgdesc = A cross platform connection manager for V2Ray and other backends
-	pkgver = 20210802
+	pkgver = 20211215
 	pkgrel = 1
-	url = https://github.com/moodyhunter/QvPersonal
+	url = https://github.com/Shadowsocks-NET/Qv2ray
 	arch = x86_64
 	license = GPL3
 	makedepends = jq
@@ -31,4 +31,4 @@ pkgbase = qv2ray-static-bin-nightly
 	conflicts = qv2ray
 	conflicts = xray
 
-pkgname = qv2ray-static-bin-nightly
+pkgname = qv2ray-static-nightly-bin
